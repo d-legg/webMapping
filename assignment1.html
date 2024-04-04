@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+
+        <style>
+            body, html, #map {
+                width: 100%;
+                height: 100%;
+            }
+
+            h1{
+                font-size: 32px;
+                color: orchid;
+                margin-bottom: 0;
+            }
+
+            p{
+                margin: 0
+            }
+
+            .mapboxgl-popup-content{
+                border-radius: 15px !important
+            }
+
+        </style>
+    
+    </head>
+
+    <body style="margin: 0;">
+
+        <div id='map' style="width:100%;height:100%;"></div>
+
+        <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoiZGxlZ2c0OCIsImEiOiJjbHBpcjhucDkwMXp5MmxvdXZ4OTA3ajIzIn0.VrClHW1R9SYZLfcmTzvrLA';
+            var map = new mapboxgl.Map({
+                container: 'map',
+                center: [-120.120679, 44.422221],
+                zoom: 6,
+                style: 'mapbox://styles/mapbox/outdoors-v12',
+                projection: 'mercator'
+            })
+
+            const uoMarker = new mapboxgl.Marker({
+                color: 'orchid'
+            })
+            .setLngLat([-123.0726, 44.0448])
+            .addTo(map);
+
+            const rockPopup = new mapboxgl.Popup({
+                closeOnClick: false
+            })
+            .setLngLat([-121.1406, 44.3682])
+            .setHTML('<h1>Smith Rock!</h1><br><a href="https://www.mountainproject.com/area/105788989/smith-rock">click to view climbing routes!</a>')
+            .addTo(map);
+
+            
+
+        </script>
+    
+    </body>
+
+</html>
