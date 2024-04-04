@@ -24,12 +24,25 @@
                 border-radius: 15px !important
             }
 
+            #title{
+                left: 0;
+                background-color: orchid;
+                z-index: 3;
+                position: absolute;
+                float: left;
+                margin-left: 20px;
+                margin-top: 20px;
+                width: 150px;
+                height: 50px;
+            }
+
         </style>
     
     </head>
 
     <body style="margin: 0;">
-
+        
+        <div id="title"></div>
         <div id='map' style="width:100%;height:100%;"></div>
 
         <script>
@@ -55,7 +68,7 @@
             .setHTML('<h1>Smith Rock!</h1><br><a href="https://www.mountainproject.com/area/105788989/smith-rock">click to view climbing routes!</a>')
             .addTo(map);
 
-            
+            document.getElementById('title').innerHTML = "<p style='text-align:center;padding-top:5px'>Author: Dylan Legg</p><p style='text-align:center'>Big Maps!</p>"
 
         </script>
     
