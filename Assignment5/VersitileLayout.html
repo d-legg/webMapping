@@ -6,7 +6,7 @@ From https://medium.com/nyc-planning-digital/a-versatile-layout-for-full-screen-
 
 <head>
     <meta charset="utf-8">
-    <title>Hello World</title>
+    <title>Washington D.C. Sites</title>
 
     
     <!-- JavaScript Libraries-->
@@ -25,7 +25,7 @@ From https://medium.com/nyc-planning-digital/a-versatile-layout-for-full-screen-
 <body>
 
     <div class="site-header">
-        <strong class="site-title">My Mapping Application</strong>
+        <strong class="site-title">Great times in Washington D.C.</strong>
     </div>
 
     <div class="site-main grid-x has-content-open">
@@ -33,25 +33,24 @@ From https://medium.com/nyc-planning-digital/a-versatile-layout-for-full-screen-
         <div class="search-container cell medium-3 large-2">
             <input type="text" placeholder="Search..." class="search" />
             <ul class="search-results no-bullet">
-                <li>Search Result 1</li>
+                <!-- <li>Search Result 1</li>
                 <li>Search Result 2</li>
-                <li>Search Result 3</li>
+                <li>Search Result 3</li> -->
             </ul>
         </div>
         
         <div class="map-container cell medium-auto large-order-2">
              <!--  ADD iframe here, inside the versitle layout's map container (VI.2.)   -->
-
+             <iframe src="filter-markers.html" title="Map"></iframe> 
         </div>
 
         <!--  Sidebar panel  -->
         <div class="sidebar cell medium-3 large-2 large-order-1 show-for-medium">
             <h5>Sidebar</h5>
             <ul>
-                <li><a class="content-link" href="#">Open Content</a></li>
-                <li>Item 2</li>
-                <li>Item 3</li>
-                <li>Item 4</li>
+                <li><a class="content-link" href="#">Open Side Panel</a></li>
+                <li>Click on a map icon for more information!</li>
+                <li>Enjoy some of the best vibes our nation's capital has to offer!</li>
             </ul>
 
             <hr />
@@ -64,10 +63,10 @@ From https://medium.com/nyc-planning-digital/a-versatile-layout-for-full-screen-
         
         <!--  Content panel  -->
         <div class="content cell large-5 large-order-3">
-            <h2>Content</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis consequuntur at, illum error fuga minima aliquam amet perspiciatis laborum ducimus laudantium corporis corrupti iusto!</p>
-            <p>Non cum voluptates nostrum veritatis. Ullam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis consequuntur at, illum error fuga minima aliquam amet perspiciatis laborum ducimus laudantium corporis corrupti iusto! Non cum voluptates nostrum veritatis. Ullam!</p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis consequuntur at, illum error fuga minima aliquam amet perspiciatis laborum ducimus laudantium corporis corrupti iusto!</p>
+            <h2>D.C. Vibes!</h2>
+            <p>This map shows areas of interest in Washington D.C. On here you'll find entertainment, drinks, and more!</p>
+            <p>Click on a map icon to display more information about that point. Filter out areas of interest by interacting with the legend in the top right.</p>
+            <p>Hit the exit button on the top left of this panel to close it! To reopen this menu, click the Open Content text on the Sidebar</p>
         </div>
 
     </div>
