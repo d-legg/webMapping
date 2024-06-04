@@ -1,0 +1,304 @@
+.topLayer{
+    z-index: 1;
+    position: absolute;
+}
+
+
+html, head, body{
+    height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.mapboxgl-popup-content{
+    background-color: wheat !important;
+    border-radius: 15px !important;
+    opacity: .9 !important;
+
+}
+
+/* zoom controls */
+.mapboxgl-ctrl-top-left {
+    left: 0;
+    top: 0;
+    margin-left: 400px;
+    margin-top: 16px;
+}
+
+.mapboxgl-popup-tip{
+    /* background-color: wheat !important; */
+    border-top-color: wheat !important;
+    opacity: .9 !important;
+
+}
+
+.lightBackground{
+    background-color: #9F87D6 !important;
+}
+
+h1{
+    font-size: 24px;
+    margin: 0;
+}
+
+p{
+    margin: 0;
+}
+
+#mapContainer{
+    position: relative;
+    height: 100%;
+}
+
+#map{
+    height: 100%;
+    z-index: 0;
+    position: relative;
+    cursor: pointer !important;
+}
+
+#mapTitle{
+    left: 0;
+    top: 0;
+    margin: 25px;
+    height: fit-content;
+    width: 330px;
+    position: absolute;
+    background-color: #785BBC;
+    border: 8px;
+    border-color: #321479;
+    border-style: solid;
+    padding: 10px;
+}
+
+#howTo{
+    top: 0;
+    left: 0;
+    width: 200px;
+    position: absolute;
+    height: 240px;
+    border: 8px;
+    background-color: #9F87D6;
+    border-color: #785BBC;
+    border-style: solid;
+    margin-left: 25px;
+    margin-top: 110px;
+    padding: 10px;
+    display: none;
+}
+
+#infoPanel{
+    right: 0;
+    top: 0;
+    position: absolute;
+    margin: 25px;
+    width: 250px;
+    height: 250px;
+    background-color: #785BBC;
+    border: 8px;
+    border-color: #321479;
+    border-style: solid;
+}
+
+#clearPanel{
+    top: 0;
+    right: 0;
+    position: absolute;
+    margin-right: 300px;
+    margin-top: 18px;
+    display: none;
+    cursor: pointer;
+}
+
+#expandButton{
+    font-size: 36px;
+    right: 0;
+    position: absolute;
+    color: ivory;
+    margin-right: 13px;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+#orchardContainer{
+    top: 0;
+    left: 0;
+    position: absolute;
+    border: 8px;
+    background-color: #9F87D6;
+    border-color: #321479;
+    border-style: solid;
+    margin-left: 25px;
+    margin-top: 130px;
+    height: 40px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    transition: height 0.3s ease;
+    overflow: hidden;
+}
+
+#orchardGrouped::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+    height: 100%; /* Height of the scrollbar */
+    background: #785BBC; /* Color of the track */
+    position: absolute;
+
+}
+
+#orchardGrouped::-webkit-scrollbar-thumb {
+    background-color: #9F87D6; /* Color of the thumb */
+    border-radius: 6px; /* Rounded corners */
+    border: 3px solid #785BBC; /* Border around the thumb */
+    height: 10px;
+}
+
+#orchardGrouped{
+    overflow-y: scroll; 
+    height: 100%;
+    width: 350px;
+    position: relative;
+    margin-top: 100px;
+    border-top: solid 8px;
+    border-color: #321479;
+}
+
+.orchardPanel{
+    height: 125px;
+    width: 100%;
+}
+
+.mainTitle{
+    font-size: 40px;
+    color: ivory;
+    text-align: center;
+}
+
+.panelName{
+    color: ivory;
+    text-align: center;
+    font-size: 32px;
+    border-bottom: 3px solid ivory;
+}
+
+.panelText{
+    padding-left: 10px;
+    color: ivory;
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+.howToText{
+    color: ivory;
+    padding-top: 10px;
+    text-align: left;
+}
+
+/* This is the divs populating orchardContainer */
+/* .scrollInfo{
+    border-bottom: #321479;
+    border-style: solid;
+    border-radius: 10px;
+    width: 330px;
+    height: 150px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    margin-left: 1px;
+    background-color: #785BBC;
+} */
+
+.scrollInfo{
+    border-color: #321479;
+    border-style: outset;
+    border-width: 5px;
+    border-radius: 10px;
+    width: 325px;
+    height: 160px;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    margin-left: 1px;
+    background-color: #785BBC;
+}
+
+.selectedOrchard{
+    background-color: #9F87D6;
+    border-style: inset;
+}
+
+
+.containerOrchardName{
+    color: ivory;
+    direction: ltr;
+    padding-left: 10px;
+}
+
+.containerOrchardText{
+    color: ivory;
+    direction: ltr;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+
+#filterTab{
+    height: 100px;
+    position: absolute;
+    width: 100%;
+    background-color: #9F87D6;
+}
+
+#searchBar{
+    bottom: 0;
+    position: absolute;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.stateFilter{
+    border-radius: 10px;
+    text-align: center;
+    border-color: #321479;
+    border-style: outset;
+    background-color: #785BBC;
+    width: 100px;
+    border-width: thick;
+    color: ivory;
+    position: absolute;
+    margin-top: 5px;
+}
+
+#washingtonButton{
+    margin-left: 125px;
+    cursor: pointer;
+}
+
+#oregonButton{
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#resetButton{
+    position: absolute;
+    right: 0;
+    margin-top: 9px;
+    margin-right: 50px;
+    background-color: #5D3DA8;
+    color: ivory;
+    cursor: pointer;
+}
+
+.infoAddress{
+    color: ivory;
+}
+
+#searchInput{
+    border-radius: 10px;
+    width: 200px;
+    height: 20px;
+    border: solid 5px #321479;
+    background: #9F87D6;
+    color: ivory;
+}
+
+::placeholder {
+    color: ivory;
+  }
